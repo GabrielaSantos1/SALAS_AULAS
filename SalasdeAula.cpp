@@ -11,6 +11,31 @@ void calculoMediaSala(int matriz[numSalas][qtdAlunos]) {
     //cria uma variavel de soma de todos os alunos para todas as salas
     int totalAlunos;
 
+    
+    cout << "Olá! Por favor, digite a quantidade de alunos da sala 1 e depois dê ENTER: " << endl;
+    //coloca o valor dado pelo user como valor da primeira linha e segunda coluna
+    cin >> matriz[0][1];
+    
+    cout << "Olá! Por favor, digite a quantidade de alunos da sala 2 e depois dê ENTER: " << endl;
+    //coloca o valor dado pelo user como valor da segunda linha e segunda coluna
+    cin >> matriz[1][1];
+    
+    cout << "Olá! Por favor, digite a quantidade de alunos da sala 3 e depois dê ENTER: " << endl;
+    //coloca o valor dado pelo user como valor da terceira linha e segunda coluna
+    cin >> matriz[2][1];
+    
+    cout << "Olá! Por favor, digite a quantidade de alunos da sala 4 e depois dê ENTER: " << endl;
+    //coloca o valor dado pelo user como valor da quarta linha e segunda coluna
+    cin >> matriz[3][1];
+    
+    cout << "Olá! Por favor, digite a quantidade de alunos da sala 5 e depois dê ENTER: " << endl;
+    //coloca o valor dado pelo user como valor da quinta linha e segunda coluna
+    cin >> matriz[4][1];
+    
+    cout << "Olá! Por favor, digite a quantidade de alunos da sala 6 e depois dê ENTER: " << endl;
+    //coloca o valor dado pelo user como valor da sexta linha e segunda coluna
+    cin >> matriz[5][1];
+
   // Calcula a soma de todas os alunos com para: cria um inteiro i e coloca que a variavel é menor que a variavel de numero de salas e aumenta até chegar no valor dessa variavel.
     for (int i; i < numSalas; i++) {
         //faz que a variavel de soma de todos os alunos seja com os valores da segunda coluna da matriz
@@ -18,12 +43,12 @@ void calculoMediaSala(int matriz[numSalas][qtdAlunos]) {
     }
   
     //cria uma variavel do tipo double para a media dos alunos e faz esse calculo somando os valores e dividindo pelo numero de salas
-    double mediaAlunos = static_cast<double>(totalAlunos) / numSalas;
+    double mediaAlunos = totalAlunos / numSalas;
 
-    cout << "Média de alunos nas salas: " << mediaAlunos << endl;
+    cout << endl << "Média de alunos nas salas: " << mediaAlunos << endl;
 
 
-    cout << "Salas com quantidade de alunos acima da média: ";
+    cout << "Sala(s) com quantidade de alunos acima da média: ";
     //para: coloca que a variavel inteira i é menor que a variavel de numero de salas e aumenta até chegar no valor dessa variavel.
     for (int i; i < numSalas; i++) {
         //se uma matriz for maior que a media de alunos, mostra a primeira coluna dela para o user ver qual é o número da sala
@@ -31,18 +56,24 @@ void calculoMediaSala(int matriz[numSalas][qtdAlunos]) {
             cout << matriz[i][0] << " ";
         }
     }
-    cout << endl;
+    
+    cout << endl << "Sala(s) com o maior número de alunos: ";
+    if(matriz[0][1] > matriz[1][1] || matriz[0][1] > matriz[2][1] || matriz[0][1] > matriz[3][1] || matriz[0][1] > matriz[4][1] || matriz[0][1] > matriz[5][1]){
+        cout << matriz[0][0] << endl;
+        }
+    
+    
 }
 
 int main() {
     //cria o array das matrizes das salas com a primeira coluna sendo do número da sala e da segunda sendo da quantidade de alunos
     int matrizSalas[numSalas][qtdAlunos] = {
-        {1, 35}, // Sala 1 com 35 alunos
-        {2, 4}, // Sala 2 com 4 alunos
-        {3, 22}, // Sala 3 com 22 alunos
-        {4, 20}, // Sala 4 com 30 alunos
-        {5, 36}, // Sala 5 com 36 alunos
-        {6, 30}, // Sala 6 com 30 alunos
+        {1, 0},
+        {2, 0},
+        {3, 0},
+        {4, 0},
+        {5, 0},
+        {6, 0},
     };
 
     //faz o void com o array de matrizSalas "rodar" para o user
