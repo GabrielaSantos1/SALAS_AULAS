@@ -18,7 +18,7 @@ void calculoMediaSala(int matriz[numSalas][qtdAlunos]) {
     }
   
     //cria uma variavel do tipo double para a media dos alunos e faz esse calculo somando os valores e dividindo pelo numero de salas
-    double mediaAlunos = static_cast<double>(totalAlunos) / numSalas;
+    double mediaAlunos = totalAlunos / numSalas;
 
     cout << "Média de alunos nas salas: " << mediaAlunos << endl;
 
@@ -40,7 +40,7 @@ int main() {
         {1, 35}, // Sala 1 com 35 alunos
         {2, 4}, // Sala 2 com 4 alunos
         {3, 22}, // Sala 3 com 22 alunos
-        {4, 20}, // Sala 4 com 30 alunos
+        {4, 20}, // Sala 4 com 20 alunos
         {5, 36}, // Sala 5 com 36 alunos
         {6, 30}, // Sala 6 com 30 alunos
     };
