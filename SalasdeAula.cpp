@@ -16,23 +16,23 @@ void calculoMediaSala(int matriz[numSalas][qtdAlunos]) {
     //coloca o valor dado pelo user como valor da primeira linha e segunda coluna
     cin >> matriz[0][1];
     
-    cout << "Olá! Por favor, digite a quantidade de alunos da sala 2 e depois dê ENTER: " << endl;
+    cout << "Agora, digite a quantidade de alunos da sala 2: " << endl;
     //coloca o valor dado pelo user como valor da segunda linha e segunda coluna
     cin >> matriz[1][1];
     
-    cout << "Olá! Por favor, digite a quantidade de alunos da sala 3 e depois dê ENTER: " << endl;
+    cout << "Agora, digite a quantidade de alunos da sala 3: " << endl;
     //coloca o valor dado pelo user como valor da terceira linha e segunda coluna
     cin >> matriz[2][1];
     
-    cout << "Olá! Por favor, digite a quantidade de alunos da sala 4 e depois dê ENTER: " << endl;
+    cout << "Agora, digite a quantidade de alunos da sala 4: " << endl;
     //coloca o valor dado pelo user como valor da quarta linha e segunda coluna
     cin >> matriz[3][1];
     
-    cout << "Olá! Por favor, digite a quantidade de alunos da sala 5 e depois dê ENTER: " << endl;
+    cout << "Agora, digite a quantidade de alunos da sala 5: " << endl;
     //coloca o valor dado pelo user como valor da quinta linha e segunda coluna
     cin >> matriz[4][1];
     
-    cout << "Olá! Por favor, digite a quantidade de alunos da sala 6 e depois dê ENTER: " << endl;
+    cout << "Agora, digite a quantidade de alunos da sala 6: " << endl;
     //coloca o valor dado pelo user como valor da sexta linha e segunda coluna
     cin >> matriz[5][1];
 
@@ -57,11 +57,48 @@ void calculoMediaSala(int matriz[numSalas][qtdAlunos]) {
         }
     }
     
+    //código enorme para mostrar apenas a sala da matriz que tem mais alunos que as outras
     cout << endl << "Sala(s) com o maior número de alunos: ";
-    if(matriz[0][1] > matriz[1][1] || matriz[0][1] > matriz[2][1] || matriz[0][1] > matriz[3][1] || matriz[0][1] > matriz[4][1] || matriz[0][1] > matriz[5][1]){
-        cout << matriz[0][0] << endl;
+    if(matriz[0][1] >= matriz[1][1] && matriz[0][1] >= matriz[2][1] && matriz[0][1] >= matriz[3][1] && matriz[0][1] >= matriz[4][1] && matriz[0][1] >= matriz[5][1]){
+        cout << matriz[0][0] << " ";
+        }
+    if(matriz[1][1] >= matriz[0][1] && matriz[1][1] >= matriz[2][1] && matriz[1][1] >= matriz[3][1] && matriz[1][1] >= matriz[4][1] && matriz[1][1] >= matriz[5][1]){
+        cout << matriz[1][0] << " ";
+        }
+    if(matriz[2][1] >= matriz[1][1] && matriz[2][1] >= matriz[0][1] && matriz[2][1] >= matriz[3][1] && matriz[2][1] >= matriz[4][1] && matriz[2][1] >= matriz[5][1]){
+        cout << matriz[2][0] << " ";
+        }
+    if(matriz[3][1] >= matriz[2][1] && matriz[3][1] >= matriz[0][1] && matriz[3][1] >= matriz[1][1] && matriz[3][1] >= matriz[4][1] && matriz[3][1] >= matriz[5][1]){
+        cout << matriz[3][0] << " ";
+        }
+    if(matriz[4][1] >= matriz[2][1] && matriz[4][1] >= matriz[0][1] && matriz[4][1] >= matriz[1][1] && matriz[4][1] >= matriz[3][1] && matriz[4][1] >= matriz[5][1]){
+        cout << matriz[4][0] << " ";
+        }
+    if(matriz[5][1] >= matriz[2][1] && matriz[5][1] >= matriz[0][1] && matriz[5][1] >= matriz[1][1] && matriz[5][1] >= matriz[3][1] && matriz[5][1] >= matriz[4][1]){
+        cout << matriz[5][0] << endl;
         }
     
+    //código enorme para mostrar apenas a sala da matriz que tem menos alunos que as outras
+    cout << endl << "Sala(s) com o menor número de alunos: ";
+    if(matriz[0][1] <= matriz[1][1] && matriz[0][1] <= matriz[2][1] && matriz[0][1] <= matriz[3][1] && matriz[0][1] <= matriz[4][1] && matriz[0][1] <= matriz[5][1]){
+        cout << matriz[0][0] << " ";
+        }
+    if(matriz[1][1] <= matriz[0][1] && matriz[1][1] <= matriz[2][1] && matriz[1][1] <= matriz[3][1] && matriz[1][1] <= matriz[4][1] && matriz[1][1] <= matriz[5][1]){
+    cout << matriz[1][0] << " ";
+    }
+    if(matriz[2][1] <= matriz[1][1] && matriz[2][1] <= matriz[0][1] && matriz[2][1] <= matriz[3][1] && matriz[2][1] <= matriz[4][1] && matriz[2][1] <= matriz[5][1]){
+    cout << matriz[2][0] << " ";
+    }
+    if(matriz[3][1] <= matriz[2][1] && matriz[3][1] <= matriz[0][1] && matriz[3][1] <= matriz[1][1] && matriz[3][1] <= matriz[4][1] && matriz[3][1] <= matriz[5][1]){
+    cout << matriz[3][0] << " ";
+    }
+    if(matriz[4][1] <= matriz[2][1] && matriz[4][1] <= matriz[0][1] && matriz[4][1] <= matriz[1][1] && matriz[4][1] <= matriz[3][1] && matriz[4][1] <= matriz[5][1]){
+    cout << matriz[4][0] << " ";
+    }
+    if(matriz[5][1] <= matriz[2][1] && matriz[5][1] <= matriz[0][1] && matriz[5][1] <= matriz[1][1] && matriz[5][1] <= matriz[3][1] && matriz[5][1] <= matriz[4][1]){
+    cout << matriz[5][0] << endl;
+    }
+
     
 }
 
